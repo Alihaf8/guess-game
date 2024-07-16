@@ -34,6 +34,9 @@ console.log(guess);
 
 function displayGuess(){
   let inputElValue = inputEl.value;
+  if (inputElValue !== "") {
+    clickAudioEl.play();
+  }
    if (inputElValue === "") {
      alert("Please Input A Number!");
   } else if (parseInt(inputElValue) > 101){
