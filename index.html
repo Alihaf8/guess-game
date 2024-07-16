@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Guess Game</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" type="image/x-icon" href="guess-game.ico">
+</head>
+
+<body>
+  <audio src="click.wav" id="click"></audio>
+  <audio src="losing.wav" id="lose"></audio>
+  <audio src="wining.wav" id="win"></audio>
+  <div class="container" oncopy="return false;" onpaste="return false;">
+    <h1>
+      Guess Game
+    </h1>
+    <h4 class="text">
+      Guess the number between 1-100.
+    </h4>
+    <input type="number" id="in-put" placeholder="Enter The Number Here..." required oncopy="return false;" onpaste="return false;">
+    <p class="retry" id="retry">
+      Retries Left: 8
+    </p>
+    <a href="#" class="btn" id="btn" type="submit">
+      guess
+    </a>
+    <p class="result" id="result">
+    </p>
+  </div>
+  <script src="index.js">
+  </script>
+</body>
+
+</html>

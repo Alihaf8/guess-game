@@ -1,0 +1,69 @@
+body{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  text-align: center;
+  background-color: aliceblue;
+  font-family: 'Courier New', fantasy;
+}
+.container{
+  background-color: white;
+  border: 3px dotted lightyellow;
+  border-radius: 10px;
+  padding: 15px;
+  overflow: none;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 7px #ccc;
+}
+.btn{
+  display: block;
+  margin: 15px 75px;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #4D59E0;
+  width: 50%;
+  cursor: none;
+  color: white;
+  border-radius: 10px;
+  box-shadow: 1px 4px 10px #ccc;
+  transition: filter .3s ease, box-shadow .2s ease;
+  padding: 5px 10px;
+}
+.btn:active{
+  filter: brightness(0.7);
+  box-shadow: 0 2px 6px #ccc;
+}
+.result{
+  font-weight: bold;
+  font-size: 17px;
+}
+#in-put{
+  outline: none;
+  border-radius: 8px;
+  color: #B2560D;
+  border: dotted 3px lightgray;
+  font-family: 'Courier New', Courier, fantasy;
+  margin-left: 20px;
+  width: 42px;
+  transition: width .7s ease, background-color .3s linear, color .2s ease-out;
+}
+#in-put:focus{
+  width: 200px;
+}
+#in-put:active{
+  background-color: #E1E1E1;
+  border-radius: 15px;
+}
+.retry{
+  font-size: 15px;
+  margin-left: 20px;
+  font-weight: bolder;
+  font-style: oblique;
+  color: #4D0322;
+}
+#in-put::placeholder{
+  color: rosybrown;
+}
