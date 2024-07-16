@@ -8,6 +8,20 @@ btnEl.addEventListener("click", () => {
   displayGuess();
 })
 
+inputEl.addEventListener("keyup", () => {
+  keyupFunc();
+  setTimeout(keydownFunc, 200)
+})
+
+function keyupFunc(){
+  inputEl.style.backgroundColor = "#E1E1E1";
+  inputEl.style.color = "saddlebrown";
+}
+function keydownFunc(){
+  inputEl.style.backgroundColor = "white";
+  inputEl.style.color = "brown";
+}
+
 const guess = Math.floor(Math.random() * (100 - 1 + 1) + 1);
 
 let retries = 8;
@@ -18,12 +32,12 @@ function displayGuess(){
   let inputElValue = inputEl.value;
    if (inputElValue === "") {
      alert("Please Input A Number!");
-  } else if (inputElValue > 101){
+  } else if (parseInt(inputElValue) > 101){
     alert(`Please Input A Number Less Than ${inputElValue}!`);
-  } else if (inputElValue > guess) {
+  } else if (parseInt(inputElValue) > guess) {
     pEl.innerText = `Guess Too High Try Again`;
     retries--;
-  }  else if (inputElValue < guess && inputElValue !== "") {
+  }  else if (parseInt(inputElValue) < guess && inputElValue !== "") {
     pEl.innerText = `Guess Too Low Try Again`;
     retries--;
   } else{
