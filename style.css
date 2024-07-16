@@ -29,7 +29,7 @@ body{
   color: white;
   border-radius: 10px;
   box-shadow: 1px 4px 10px #ccc;
-  transition: filter .3s, box-shadow .2s;
+  transition: filter .3s ease, box-shadow .2s ease;
   padding: 5px 10px;
 }
 .btn:active{
@@ -47,11 +47,15 @@ body{
   border: dotted 3px lightgray;
   font-family: 'Courier New', Courier, fantasy;
   margin-left: 20px;
-  width: 50px;
-  transition: width .7s;
+  width: 42px;
+  transition: width .7s ease, background-color .3s linear, color .2s ease-out;
 }
 #in-put:focus{
   width: 200px;
+}
+#in-put:active{
+  background-color: #E1E1E1;
+  border-radius: 15px;
 }
 .retry{
   font-size: 15px;
@@ -59,4 +63,7 @@ body{
   font-weight: bolder;
   font-style: oblique;
   color: #4D0322;
+}
+#in-put::placeholder{
+  color: rosybrown;
 }
